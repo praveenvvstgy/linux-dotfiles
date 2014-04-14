@@ -143,7 +143,7 @@ function server() {
 # (Requires PHP 5.4.0+.)
 function phpserver() {
 	local port="${1:-4000}"
-	local ip=$(ipconfig getifaddr en1)
+	local ip=$(hostname -I)
 	sleep 1 && xdg-open "http://${ip}:${port}/" &
 	php -S "${ip}:${port}"
 }
