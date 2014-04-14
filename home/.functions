@@ -292,5 +292,7 @@ function tre() {
 }
 
 function startampps() {
-	nohup sudo -b /usr/local/ampps/./Ampps > /dev/null
+	cd /usr/local/ampps
+	nohup sudo -b ./Ampps > /dev/null
+	cd -
 }
