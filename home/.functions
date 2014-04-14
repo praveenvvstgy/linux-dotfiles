@@ -292,5 +292,5 @@ function tre() {
 }
 
 function startampps() {
-	sudo /usr/local/ampps/./Ampps
+	sudo /usr/local/ampps/./Ampps &
 }
