@@ -92,3 +92,6 @@ if has("autocmd")
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 endif
+
+" For powerline status
+set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
