@@ -139,6 +139,13 @@ function server() {
 	python -c $'import SimpleHTTPServer;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nSimpleHTTPServer.test();' "$port"
 }
 
+# Change the sound output
+function maxvol() {
+	local level="${1:-100}%"
+	pactl -- set-sink-volume 0 "$level"
+	echo "pactl -- set-sink-volume 0 $level"
+}
+
 # Start a PHP server from a directory, optionally specifying the port
 # (Requires PHP 5.4.0+.)
 function phpserver() {
